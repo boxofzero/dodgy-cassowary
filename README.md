@@ -1,8 +1,13 @@
-# [⛔ This project is NO LONGER UPDATED ⛔](https://github.com/boxofzero/dodgy-cassowary/issues/36)
 
-# Dodgy-Cassowary
+# Dodgy-Cassowary : it's Cassowary, but a bit dodgy. 
 
 ![Dodgy-Cassowary screenshot](./dodgy-cassowary-screenshot.png 'Dodgy-Cassowary')
+
+## What's new
+
+- LLM is heavily involved on the development.
+- converted into TypeScript
+- made some unit tests
 
 ## Main Features
 
