@@ -222,7 +222,7 @@ describe('plannerService', () => {
       expect(mockDocument.createElement).toHaveBeenCalledWith('a')
       expect(mockElement.setAttribute).toHaveBeenCalledWith(
         'download',
-        'cassowary_planner_data_2026-05-07T00:00:00.json'
+        'dodgy-cassowary_planner_data_2026-05-07T00:00:00.json'
       )
       expect(mockElement.click).toHaveBeenCalled()
     })

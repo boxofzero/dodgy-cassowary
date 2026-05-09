@@ -1,12 +1,12 @@
 <template>
 	<section class="flex justify-between items-center mb-5">
-		<h1 class="font-extrabold text-4xl">Cassowary : Wuthering Waves Planner</h1>
+		<h1 class="font-extrabold text-4xl">Dodgy-Cassowary : Wuthering Waves Planner</h1>
 	</section>
 	<section>
 		<div>
 			<div>
 				if you found any bugs or have some suggestions, please create issue on
-				the repository https://github.com/boxofzero/cassowary or you can contact
+				the repository https://github.com/boxofzero/dodgy-cassowary or you can contact
 				me on twitter/discord @boxofzero .
 			</div>
 			<br />

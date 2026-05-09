@@ -1,8 +1,8 @@
-# [⛔ This project is NO LONGER UPDATED ⛔](https://github.com/boxofzero/cassowary/issues/36)
+# [⛔ This project is NO LONGER UPDATED ⛔](https://github.com/boxofzero/dodgy-cassowary/issues/36)
 
-# Cassowary
+# Dodgy-Cassowary
 
-![Cassowary screenshot](./cassowary-screenshot.png 'Cassowary')
+![Dodgy-Cassowary screenshot](./dodgy-cassowary-screenshot.png 'Dodgy-Cassowary')
 
 ## Main Features
 
@@ -19,7 +19,7 @@
 
 ## Found bugs? Have ideas?
 
-Please create [issues](https://github.com/boxofzero/cassowary/issues).
+Please create [issues](https://github.com/boxofzero/dodgy-cassowary/issues).
 
 ## Disclaimer
 

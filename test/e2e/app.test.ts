@@ -8,6 +8,6 @@ describe('app,', async () => {
 		const page = await createPage('/');
 		await page.goto(url('/'), { waitUntil: 'hydration' });
 		const text = await page.textContent('p');
-		expect(text).toContain('Cassowary is a planner for Wuthering Waves');
+		expect(text).toContain('Dodgy-Cassowary is a planner for Wuthering Waves');
 	});
 });

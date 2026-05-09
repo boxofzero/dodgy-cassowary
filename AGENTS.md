@@ -1,4 +1,4 @@
-# Cassowary - Agent Instructions
+# Dodgy-Cassowary - Agent Instructions
 
 ## Commands
 
@@ -42,7 +42,7 @@ pnpm test <file>  # Run specific test file
 - Accordion state (order, open/close) persisted per group key
 - Material synthesis has tiered cascading logic
 - No ESLint/Prettier configured
-- GitHub Pages deployment requires: `NUXT_APP_BASE_URL=/cassowary/ pnpx nuxt build --preset github_pages`
+- GitHub Pages deployment requires: `NUXT_APP_BASE_URL=/dodgy-cassowary/ pnpx nuxt build --preset github_pages`
 
 ## Constraints
 

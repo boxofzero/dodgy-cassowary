@@ -6,7 +6,7 @@ describe('Welcome', () => {
 	it('display Welcome component and content', async () => {
 		const component = await mountSuspended(Welcome);
 		expect(component.html()).toContain(
-			'Cassowary is a planner for Wuthering Waves'
+			'Dodgy-Cassowary is a planner for Wuthering Waves'
 		);
 	});
 });

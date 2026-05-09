@@ -34,7 +34,7 @@
 					size="lg"
 					color="neutral"
 				>
-					Cassowary (Pre-alpha version)
+					Dodgy-Cassowary (Pre-alpha version)
 				</UBadge>
 			</div>
 		</div>

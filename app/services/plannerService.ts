@@ -54,7 +54,7 @@ export const downloadData = () => {
 
   const text = JSON.stringify(data)
   const timestamp = datetimeHelper.generateTimestamp(new Date())
-  const filename = 'cassowary_planner_data_' + timestamp + '.json'
+  const filename = 'dodgy-cassowary_planner_data_' + timestamp + '.json'
   const element = document.createElement('a')
   element.setAttribute('href', 'data:application/json;charset=utf-8,' + encodeURIComponent(text))
   element.setAttribute('download', filename)
