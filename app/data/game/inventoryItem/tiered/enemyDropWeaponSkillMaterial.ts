@@ -1,0 +1,58 @@
+export interface EnemyDropTieredItem {
+  general_name: string
+  name: string
+  tier: number
+  from: string | undefined
+  to: string | undefined
+  count: number | undefined
+}
+
+export const enemy_drop_proper_data: EnemyDropTieredItem[] = [
+  { general_name: 'howler_core', name: 'lf_howler_core', tier: 1, from: undefined, to: 'mf_howler_core', count: 3 },
+  { general_name: 'howler_core', name: 'mf_howler_core', tier: 2, from: 'lf_howler_core', to: 'hf_howler_core', count: 3 },
+  { general_name: 'howler_core', name: 'hf_howler_core', tier: 3, from: 'mf_howler_core', to: 'ff_howler_core', count: 3 },
+  { general_name: 'howler_core', name: 'ff_howler_core', tier: 4, from: 'hf_howler_core', to: undefined, count: undefined },
+  { general_name: 'whisperin_core', name: 'lf_whisperin_core', tier: 1, from: undefined, to: 'mf_whisperin_core', count: 3 },
+  { general_name: 'whisperin_core', name: 'mf_whisperin_core', tier: 2, from: 'lf_whisperin_core', to: 'hf_whisperin_core', count: 3 },
+  { general_name: 'whisperin_core', name: 'hf_whisperin_core', tier: 3, from: 'mf_whisperin_core', to: 'ff_whisperin_core', count: 3 },
+  { general_name: 'whisperin_core', name: 'ff_whisperin_core', tier: 4, from: 'hf_whisperin_core', to: undefined, count: undefined },
+  { general_name: 'mask', name: 'mask_of_constraint', tier: 1, from: undefined, to: 'mask_of_erosion', count: 3 },
+  { general_name: 'mask', name: 'mask_of_erosion', tier: 2, from: 'mask_of_constraint', to: 'mask_of_distortion', count: 3 },
+  { general_name: 'mask', name: 'mask_of_distortion', tier: 3, from: 'mask_of_erosion', to: 'mask_of_insanity', count: 3 },
+  { general_name: 'mask', name: 'mask_of_insanity', tier: 4, from: 'mask_of_distortion', to: undefined, count: undefined },
+  { general_name: 'ring', name: 'crude_ring', tier: 1, from: undefined, to: 'basic_ring', count: 3 },
+  { general_name: 'ring', name: 'basic_ring', tier: 2, from: 'crude_ring', to: 'improved_ring', count: 3 },
+  { general_name: 'ring', name: 'improved_ring', tier: 3, from: 'basic_ring', to: 'tailored_ring', count: 3 },
+  { general_name: 'ring', name: 'tailored_ring', tier: 4, from: 'improved_ring', to: undefined, count: undefined },
+  { general_name: 'tidal_residuum', name: 'lf_tidal_residuum', tier: 1, from: undefined, to: 'mf_tidal_residuum', count: 3 },
+  { general_name: 'tidal_residuum', name: 'mf_tidal_residuum', tier: 2, from: 'lf_tidal_residuum', to: 'hf_tidal_residuum', count: 3 },
+  { general_name: 'tidal_residuum', name: 'hf_tidal_residuum', tier: 3, from: 'mf_tidal_residuum', to: 'ff_tidal_residuum', count: 3 },
+  { general_name: 'tidal_residuum', name: 'ff_tidal_residuum', tier: 4, from: 'hf_tidal_residuum', to: undefined, count: undefined },
+  { general_name: 'polygon_core', name: 'lf_polygon_core', tier: 1, from: undefined, to: 'mf_polygon_core', count: 3 },
+  { general_name: 'polygon_core', name: 'mf_polygon_core', tier: 2, from: 'lf_polygon_core', to: 'hf_polygon_core', count: 3 },
+  { general_name: 'polygon_core', name: 'hf_polygon_core', tier: 3, from: 'mf_polygon_core', to: 'ff_polygon_core', count: 3 },
+  { general_name: 'polygon_core', name: 'ff_polygon_core', tier: 4, from: 'hf_polygon_core', to: undefined, count: undefined },
+]
+
+export const tiered_enemy_drop_weapon_skill_material_index_category = enemy_drop_proper_data.reduce((acc, item) => {
+  const { general_name, name, tier, to, count } = item
+  if (!acc[general_name]) acc[general_name] = {}
+  if (to) {
+    acc[general_name][tier] = { name, synthesizable: { to: tier, count: count as number } }
+  } else {
+    acc[general_name][tier] = { name }
+  }
+  return acc
+}, {} as Record<string, Record<number, { name: string; synthesizable?: { to: number; count: number } }>>)
+
+export const tiered_enemy_drop_weapon_skill_material_index_tier = enemy_drop_proper_data.reduce((acc, item) => {
+  acc[item.name] = item.tier
+  return acc
+}, {} as Record<string, number>)
+
+export const tiered_enemy_drop_weapon_skill_material_index_name = enemy_drop_proper_data.reduce((acc, item) => {
+  const { name, to, count, from } = item
+  acc[name] = { to: to ?? undefined, cost: count ?? undefined }
+  if (from) acc[name].from = from
+  return acc
+}, {} as Record<string, { to: string | undefined; cost: number | undefined; from?: string }>)

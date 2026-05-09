@@ -22,4 +22,12 @@ export default defineNuxtConfig({
 		preference: 'dark',
 	},
 	css: ['~/assets/css/main.css'],
+	typescript: {
+		tsConfig: {
+			include: [
+				// this path is relative to the generated .nuxt/tsconfig.json
+				'../test/unit/**/*',
+			],
+		},
+	},
 });

@@ -1,8 +1,30 @@
-import { defineVitestConfig } from '@nuxt/test-utils/config';
+import { defineConfig } from 'vitest/config'
+import { defineVitestProject } from '@nuxt/test-utils/config'
 
-export default defineVitestConfig({
-	// any custom Vitest config you require
+export default defineConfig({
 	test: {
-		environment: 'nuxt',
+		// reporters: ['default', 'html'],
+		coverage: {
+			enabled: true,
+			include: ['app/**/*.{ts,tsx}'],
+		},
+
+		projects: [
+			await defineVitestProject({
+				test: {
+					name: 'unit',
+					include: ['test/unit/*.{test,spec}.ts', 'test/unit/**/*.{test,spec}.ts'],
+					environment: 'nuxt',
+				},
+			}),
+			{
+				test: {
+					name: 'e2e',
+					include: ['test/e2e/*.{test,spec}.ts'],
+					environment: 'node',
+				}
+			},
+		],
 	},
-});
+
+})

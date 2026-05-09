@@ -1,0 +1,85 @@
+export interface PlannedCustomCharacter {
+  name: string
+  weapon_type: string
+  char_current_level: string
+  char_target_level: string
+  basic_attack_current_level: number
+  basic_attack_target_level: number
+  resonance_skill_current_level: number
+  resonance_skill_target_level: number
+  forte_circuit_current_level: number
+  forte_circuit_target_level: number
+  resonance_liberation_current_level: number
+  resonance_liberation_target_level: number
+  intro_skill_current_level: number
+  intro_skill_target_level: number
+  passive_skill_1: undefined
+  passive_skill_2: undefined
+  bonus_stat_tier_1_stat_1: undefined
+  bonus_stat_tier_1_stat_2: undefined
+  bonus_stat_tier_1_stat_3: undefined
+  bonus_stat_tier_1_stat_4: undefined
+  bonus_stat_tier_2_stat_1: undefined
+  bonus_stat_tier_2_stat_2: undefined
+  bonus_stat_tier_2_stat_3: undefined
+  bonus_stat_tier_2_stat_4: undefined
+}
+
+export type SkillLevel = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10
+
+export type Level = '1' | '50' | '50A' | '60' | '60A' | '70' | '70A' | '80' | '80A' | '90'
+
+export interface CharacterStructure {
+  active_skills: string[]
+  passive_skills: string[]
+}
+
+export const customCharacter: PlannedCustomCharacter = {
+  name: '',
+  weapon_type: '',
+  char_current_level: '1',
+  char_target_level: '1',
+  basic_attack_current_level: 1,
+  basic_attack_target_level: 1,
+  resonance_skill_current_level: 1,
+  resonance_skill_target_level: 1,
+  forte_circuit_current_level: 1,
+  forte_circuit_target_level: 1,
+  resonance_liberation_current_level: 1,
+  resonance_liberation_target_level: 1,
+  intro_skill_current_level: 1,
+  intro_skill_target_level: 1,
+  passive_skill_1: undefined,
+  passive_skill_2: undefined,
+  bonus_stat_tier_1_stat_1: undefined,
+  bonus_stat_tier_1_stat_2: undefined,
+  bonus_stat_tier_1_stat_3: undefined,
+  bonus_stat_tier_1_stat_4: undefined,
+  bonus_stat_tier_2_stat_1: undefined,
+  bonus_stat_tier_2_stat_2: undefined,
+  bonus_stat_tier_2_stat_3: undefined,
+  bonus_stat_tier_2_stat_4: undefined,
+}
+
+export const customCharacterStructure: CharacterStructure = {
+  active_skills: [
+    'char',
+    'basic_attack',
+    'resonance_skill',
+    'forte_circuit',
+    'resonance_liberation',
+    'intro_skill',
+  ],
+  passive_skills: [
+    'passive_skill_1',
+    'passive_skill_2',
+    'bonus_stat_tier_1_stat_1',
+    'bonus_stat_tier_1_stat_2',
+    'bonus_stat_tier_1_stat_3',
+    'bonus_stat_tier_1_stat_4',
+    'bonus_stat_tier_2_stat_1',
+    'bonus_stat_tier_2_stat_2',
+    'bonus_stat_tier_2_stat_3',
+    'bonus_stat_tier_2_stat_4',
+  ],
+}
